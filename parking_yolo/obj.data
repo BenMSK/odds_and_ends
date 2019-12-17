@@ -1,0 +1,6 @@
+classes= 1
+train  = x64/train.txt
+valid  = x64/train.txt
+names = obj.names
+backup = backup/
+
