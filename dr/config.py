@@ -3,7 +3,7 @@ import math
 DEG2RAD = math.pi / 180.0
 class Vehicle:
     def __init__(self, steering_ratio = 15.56, x=0, y=0, velocity = 0, steering = 0):
-        self.steering_ratio = steering_ratio#steering / yaw #14.60 good
+        self.steering_ratio = 14.60#steering / yaw #14.60 good
         self.x = x
         self.y = y
         self.velocity = velocity
@@ -52,7 +52,7 @@ class Vehicle:
         self.velocity += current_accel*dt
 
     def BicycleModel(self, current_steering, current_velocity, dt, forward, alpha = 0.5):
-        current_velocity*= 1.2
+        # current_velocity*= 1.2
         current_velocity = alpha*current_velocity+(1-alpha)*self.velocity# control(?)
         if forward:
             sign = +1.
